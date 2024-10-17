@@ -1,9 +1,9 @@
 package com.techcrack.LearningSpring.Game;
 
 public class GameRunner {
-	private SuperContraGame game;
+	private GameConsole game;
 	
-	public GameRunner(SuperContraGame game) {
+	public GameRunner(GameConsole game) {
 		this.game = game;
 	}
 	

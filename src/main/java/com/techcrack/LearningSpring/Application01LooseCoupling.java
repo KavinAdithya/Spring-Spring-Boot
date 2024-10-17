@@ -7,12 +7,13 @@ import com.techcrack.LearningSpring.Game.*;
 
 
 @SpringBootApplication
-public class LearningSpringCoreApplication {
+public class Application01LooseCoupling {
 
 	public static void main(String[] args) {
-		// var marioGame = new MarioGame();
-		var superContraGame = new SuperContraGame();
-		var gameRunner = new GameRunner(superContraGame);
+		var game = new PacMan();
+		
+		// Loose Coupling
+		var gameRunner = new GameRunner(game);
 		
 		gameRunner.run();
 	}
