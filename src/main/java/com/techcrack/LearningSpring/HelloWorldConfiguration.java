@@ -1,7 +1,9 @@
 package com.techcrack.LearningSpring;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name, int age , Address address) {
 	public void displayData() {
@@ -41,9 +43,24 @@ public class HelloWorldConfiguration {
 		return new Address("Dharmapuri", "TamilNadu", "India");
 	}
 	
+	@Bean
+	@Qualifier("Native")
+	public Address address1() {
+		return new Address("Coimbatore", "Tamil Nadu", "India");
+	}
 	// Bean Reusing Existing
+	// Method - 1
+	// By Invoking method
 	@Bean
 	public Person person1() {
 		return new Person(name(), age(), address());
+	}
+	
+	// Method - 2
+	// By Passing parameter spring will automatically invoke the particular parameter matched method
+	@Bean
+	@Primary
+	public Person person2(String name, int age, @Qualifier("Native")Address address2) {
+		return new Person(name, age, address2);
 	}
  }
