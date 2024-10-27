@@ -1,10 +1,9 @@
-package com.techcrack.LearningSpring;
+package com.techcrack.LearningSpring.helloWorld;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-
 record Person(String name, int age , Address address) {
 	public void displayData() {
 		System.out.println("Company Name is " + name + "\nIt was Old for " + age + " Agoo.. \n" + address);	

@@ -2,6 +2,7 @@ package com.techcrack.LearningSpring;
 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.techcrack.LearningSpring.Game.*;
 
@@ -10,12 +11,18 @@ import com.techcrack.LearningSpring.Game.*;
 public class Application01LooseCoupling {
 
 	public static void main(String[] args) {
-		var game = new PacMan();
-		
-		// Loose Coupling
-		var gameRunner = new GameRunner(game);
-		
-		gameRunner.run();
+		try (var context =
+				new AnnotationConfigApplicationContext(GameConfiguration.class)) {
+			
+			var game = (MarioGame) context.getBean("marioGame");
+			game.down();
+//			var game1 = context.getBean(SuperContraGame.class);
+//			var game2 = context.getBean(PacMan.class);
+			
+//			var runner = (GameRunner)context.getBean("SuperContraGameRunner");
+//			runner.run();
+			
+		}
 	}
 
 }
