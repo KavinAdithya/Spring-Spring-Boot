@@ -1,4 +1,4 @@
-package com.techcrack.LearningSpring.javaFundamentals;
+package com.techcrack.LearningSpring.module1.javaFundamentals;
 
 record Person(int x, int y) {
 	public Person{

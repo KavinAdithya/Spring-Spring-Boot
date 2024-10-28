@@ -1,11 +1,11 @@
-package com.techcrack.LearningSpring;
+package com.techcrack.LearningSpring.module1;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import com.techcrack.LearningSpring.Game.*;
+import com.techcrack.LearningSpring.module1.Game.*;
 
 @Configuration
 public class GameConfiguration {

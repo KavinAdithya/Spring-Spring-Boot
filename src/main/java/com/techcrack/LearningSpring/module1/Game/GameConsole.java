@@ -1,4 +1,4 @@
-package com.techcrack.LearningSpring.Game;
+package com.techcrack.LearningSpring.module1.Game;
 
 public interface GameConsole {
 	void up();

@@ -1,4 +1,4 @@
-package com.techcrack.LearningSpring.Tasks.TOC;
+package com.techcrack.LearningSpring.module1.Tasks.TOC;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

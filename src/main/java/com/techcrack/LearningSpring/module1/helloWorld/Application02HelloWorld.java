@@ -1,4 +1,4 @@
-package com.techcrack.LearningSpring.helloWorld;
+package com.techcrack.LearningSpring.module1.helloWorld;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

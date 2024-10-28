@@ -1,10 +1,10 @@
-package com.techcrack.LearningSpring;
+package com.techcrack.LearningSpring.module1;
 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.techcrack.LearningSpring.Game.*;
+import com.techcrack.LearningSpring.module1.Game.*;
 
 
 @SpringBootApplication

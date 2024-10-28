@@ -1,4 +1,4 @@
-package com.techcrack.LearningSpring.Game;
+package com.techcrack.LearningSpring.module1.Game;
 
 public class MarioGame implements GameConsole{
 	public MarioGame() {

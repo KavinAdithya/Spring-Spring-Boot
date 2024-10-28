@@ -1,8 +1,8 @@
-package com.techcrack.LearningSpring.Tasks.Configuration;
+package com.techcrack.LearningSpring.module1.Tasks.Configuration;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.techcrack.LearningSpring.Tasks.TOC.Travel;
+import com.techcrack.LearningSpring.module1.Tasks.TOC.Travel;
 
 public class SpringContext {
 	public static void main(String[] args) {

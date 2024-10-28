@@ -1,5 +1,8 @@
-package com.techcrack.LearningSpring.Game;
+package com.techcrack.LearningSpring.module2.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacMan implements GameConsole{
 	
 	@Override
