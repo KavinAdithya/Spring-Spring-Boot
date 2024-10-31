@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BookService {
-	List<Book> books;
+	private List<Book> books;
 	
 	@Autowired
 	public BookService(List<Book> books) {
