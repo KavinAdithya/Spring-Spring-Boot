@@ -11,7 +11,7 @@ public class BusinessConfiguration {
 		try (var context = new AnnotationConfigApplicationContext(BusinessConfiguration.class)) {
 			BusinessCalculation businessCalculation = context.getBean(BusinessCalculation.class);
 			
-			System.out.println("Maximum Number is : " + businessCalculation.findMax());
+			System.out.println("Maximum Number is : " + businessCalculation.findMax()); 
 		}
 	}
 }

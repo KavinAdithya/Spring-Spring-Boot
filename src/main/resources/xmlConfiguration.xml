@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+	
+ 	 <bean id="name" class="java.lang.String" c:original = "Techcrack@3"/>
+       <!--  <constructor-arg value="Techcrack ! ^ ! @3" /> 
+       </bean> --> 
+    
+	<bean id = "student1" p:age = "33" p:name = "Kavin" init-method="warmup" destroy-method="destroy" scope = "singleton"  class = "com.techcrack.LearningSpring.xmlConfigurations.Student">
+		<constructor-arg ref = "course"/>
+	</bean>
+
+    <context:component-scan base-package = "com.techcrack.LearningSpring.xmlConfigurations"/>
+	<bean id = "fees2" class = "java.lang.Double">
+		<constructor-arg value = "99910.99"/>
+	</bean>
+    
+    <bean id = "courseName" class = "java.lang.String">
+    	<constructor-arg value = "Spring Boot in Java programming"/>
+    </bean>
+
+	
+	<bean id = "fees1" class = "java.lang.Double" primary = "true">
+		<constructor-arg value = "109910"/>
+	</bean>
+	
+	<bean id = "topic" class = "java.lang.String">
+		<constructor-arg value = "Inversion of Control"/>
+	</bean>
+	
+	<bean id = "duration" class = "java.lang.Integer">
+		<constructor-arg value = "24"/>
+	</bean>
+</beans>
