@@ -2,9 +2,10 @@ package com.techcrack.LearningSpring.module1.Tasks.businessTask;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
 @Qualifier("MySQL")
+@Repository
 public class MySQLDataService implements DataService{
 	
 	@Override
