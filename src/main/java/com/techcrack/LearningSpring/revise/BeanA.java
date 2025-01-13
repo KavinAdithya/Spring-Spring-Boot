@@ -5,10 +5,11 @@ import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
 
-@Service
-@Qualifier("ram")
+@Service("beanA")
+@Qualifier("dummy")
 public class BeanA {
 	int a = 1;
+	
 	public BeanA() {
 		super();
 		System.out.println("Bean A Instantiated...");

@@ -5,11 +5,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class DriverRevise {
 	public static void main(String[] args) {
 		try (var context = new AnnotationConfigApplicationContext(ConfigurationRevise.class)) {
-//			String[] beansManaged = context.getBeanDefinitionNames();
-//			
-//			for (String bean : beansManaged) {
-//				System.out.println(bean);
-//			}
+			String[] beansManaged = context.getBeanDefinitionNames();
+			
+			for (String bean : beansManaged) {
+				System.out.println(context.getBeanDefinition(bean));
+			}
 //			
 //			System.out.println(context.getBeanDefinitionCount());
 //			
@@ -18,9 +18,9 @@ public class DriverRevise {
 //			System.out.println(beanDefinition);
 			
 			
-			var beanA = context.getBean("ram", BeanA.class);
+			var beanB = context.getBean(BeanB.class);
 			
-			System.out.println(beanA.a);
+			System.out.println(beanB.beanA.a);
 		}
 	}
 }
